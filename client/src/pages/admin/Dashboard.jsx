@@ -8,7 +8,7 @@ function Dashboard() {
   // 🔥 FETCH DATA
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/franchise/all");
+      const res = await axios.get("https://spdp.onrender.com/api/franchise/all");
       setData(res.data);
     } catch (err) {
       console.log(err);
@@ -21,13 +21,13 @@ function Dashboard() {
 
   // ✅ APPROVE
   const approve = async (id) => {
-    await axios.put(`http://localhost:5000/api/franchise/approve/${id}`);
+    await axios.put(`https://spdp.onrender.com/api/franchise/approve/${id}`);
     fetchData();
   };
 
   // ❌ REJECT
   const reject = async (id) => {
-    await axios.put(`http://localhost:5000/api/franchise/reject/${id}`);
+    await axios.put(`https://spdp.onrender.com/api/franchise/reject/${id}`);
     fetchData();
   };
 
@@ -36,7 +36,7 @@ function Dashboard() {
     const confirmDelete = window.confirm("Delete this application?");
     if (!confirmDelete) return;
 
-    await axios.delete(`http://localhost:5000/api/franchise/delete/${id}`);
+    await axios.delete(`https://spdp.onrender.com/api/franchise/delete/${id}`);
     fetchData();
   };
 

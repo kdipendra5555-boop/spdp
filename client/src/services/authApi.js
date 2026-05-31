@@ -1,7 +1,7 @@
 // src/services/authApi.js
 import axios from "axios";
 
-const API = "http://localhost:5000/api/auth";
+const API = "https://spdp.onrender.com/api/auth";
 
 export const sendOtp = (email) =>
   axios.post(`${API}/send-otp`, { email });

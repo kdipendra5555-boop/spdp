@@ -39,7 +39,7 @@ const FranchiseApply = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/franchise/apply", formData);
+      await axios.post("https://spdp.onrender.com/api/franchise/apply", formData);
       alert("Application Submitted 🚀");
     } catch (err) {
       alert("Error submitting form");
